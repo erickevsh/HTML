@@ -4,6 +4,20 @@
     <title>Primera web</title> <!-- Titulo de nuestra web -->
 </head>
 <body>
+    <form>
+        <label for="nombre">nombre</label> <!--label sirve para indicar cual es el dato que nosotros estamos solicitando del usuario-->
+        <input id="nombre" name="nombre"/> <!--id hace que si por algun motivo el usuario pincha sobre el texto de nombre lo mande directamente al cuadro y no seleccione el texto-->
+        <br>
+        <label for="apellido">apellido</label>
+        <input id="apellido" name="apellido"/>
+        <br>
+        <textarea rows="10" id="comentario" placeholder="ingrese comentario" name="comentario"></textarea> <!--cuadro de texto con para comentario (desde textarea e id es para generarlo)-->
+        <!--rows="10" (indica cuantas lineas estan permitidas en el cuadro de texto)-->
+
+        <!--El atributo (NAME="") es el nombre con el que el dato se envía cuando el formulario se manda (por ejemplo al backend o al servidor).-->
+
+    </form> <!--formularios / dentro de este tendremos que poner los distintos campos de informacion |asi solo genera un campo de texto --> 
+
         <h1>Hola mundo</h1>          <!--H1 = Titulo encabezado -->
         <h2>segundo hola mundo</h2>          <!--H2 = Titulo segundo encabezado-->         
         <h3>Hola mundo</h3>          <!--H = cada vez mas pequeño -->     
@@ -26,6 +40,7 @@
     <img src="img/goku.webp"/> <!--nombre de mi imagen esta linea es igual a la de arriba como es un link y el otro una direccion desde la carpeta del proyecto-->
     <!--img/la imagen indica que la imagen que muestro esta dentro de una carpeta-->
     <!--cambiar width= "200" height= "200" (colocar ambas para reducir aunmas la img)-->
+    
 </body>
 </html>
 
