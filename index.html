@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> <!--toda esta linea de hace que crea un cuadro para que sea mas facil de leer-->
+            table, th, td {
+                border: 1px solid black;
+            } 
+    </style>
+    <title>Primera web</title> <!-- Titulo de nuestra web -->
+</head>
+<body>
+    <table style="widht: 500px;">  <!--style="border: 1px solid black;" (AGREGA UN RECUADRO DE COLOR NEGRO)
+                                        style="widht: 500px;" (HACE MAS GRANDE LA TABLA)-->
+        <thead>     <!--thead sirve para que podamos agrupar elementos-->
+            <tr>    <!--tr = table roar = una fila en nuestra tabla-->
+           <th>producto</th> 
+           <th>precio</th> 
+        <tbody>     <!--tbody sirve para identificar todas las tablas o agrupar todas las filas que pertenezcan al cuerpo de nuestra tabla-->
+            </tr> 
+        </thead>
+        <tr>
+            <td>chanchito
+            <td>9.99$</td>                              <!-- td = se utiliza para definir una celda dentro de una tabla.-->
+         <tr>
+            <td>chanchito muy feliz
+            <td>29.99$</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>total 39.98$</td> <!--resultado de la suma de los precios de los objetos-->
+        </tfoot>
+    </table>
+    <!--UL lista no ordenada (ese es su significado)-->
+    <ul>
+        <li>Elemento 1</li> <!--List item-->
+        <li>Elemento 2</li> <!--List item-->
+        <li>Elemento 3</li> <!--List item-->
+        <li>Elemento 4</li> <!--List item-->
+    </ul>
+
+    <!--OL lista ordenada (da una lista de elementos ,  1.(lista),2(etc,etc,3(etc,etc))    DEPENDIENDO DE CUANTOS ELEMENTOS NOSOTROS TENGAMOS ↓ )-->
+    <ol>
+        <li value="50">Elemento 1</li> <!--List item-->     <!--value ="" MUESTRA DESDE QUE VALOR EMPIEZA LA LISTA EN ESTE CASO 50 (50,51,52,53)-->
+        <li>Elemento 2</li> <!--List item-->
+        <li>Elemento 3</li> <!--List item-->
+        <li>Elemento 4</li> <!--List item-->
+        <li>
+            <ol> <!--este da numero de lista y de ahi salen una lista de elementos-->
+                <li style="list-style-type: lower-roman;">sub elemento 1</li> 
+                  
+                <!--    podemos cambiar el valor de lower alpha (ejemplo) por otro para cambiar el valor que aparece
+                 a la izquierda de los elementos /el valor cambia x A,B,C (style hay que copiarlo en todas las lineas que se les quiera agregar)-->
+                
+                <li style="list-style-type: lower-roman;">sub elemento 2</li> <!--B-->
+                <li style="list-style-type: lower-roman;">sub elemento 3</li> <!--C-->
+            </ol>
+        </li>
+
+    </ol>
+
+    <form action="/formulario" method="post"> <!--get o post (Get la url maxima que podremos utilizar es 250 caracteres)-->
+        <!--Para mandar al servidor se usa action y este debe de llevar una ruta-->
+        <!--tenemos 2 valores para enviar GET(POR URL,POST)-->
+        <!--GET se usa para pedir información al servidor y los datos se envían por la URL.
+            POST se usa para enviar información al servidor y los datos no se ven en la URL.-->
+
+        <label for="nombre">nombre</label> <!--label sirve para indicar cual es el dato que nosotros estamos solicitando del usuario-->
+        <input value="chanchito"nombre" name="nombre"/> <!--id hace que si por algun motivo el usuario pincha sobre el texto de nombre lo mande directamente al cuadro y no seleccione el texto-->
+        <br>
+        <label for="apellido">apellido</label>
+        <input value="feliz" id="apellido" name="apellido"/>
+        <br>
+        <label for="comentario">comentario</label><br> <!--este br del final es solo para que el texto de comentrario no salga hasta abajo-->
+        <textarea cols="50" rows="10" id="comentario" placeholder="ingrese comentario" name="comentario">este es un valor por defecto</textarea> <!--cuadro de texto con para comentario (desde textarea e id es para generarlo)-->
+        <!--rows="10" (indica cuantas lineas estan permitidas en el cuadro de texto)-->
+        <!--cols="50" (indica cuantas columnas quieres agregar al cuadro de texto)-->
+
+        <!--El atributo (NAME="") es el nombre con el que el dato se envía cuando el formulario se manda (por ejemplo al backend o al servidor).-->
+
+        <br>
+        
+        <button type="button">Tipo boton</button> <!--el que dice tipo boton es el texto que podemos modificar para nuestro boton-->
+        <button type="reset">Tipo reset</button>
+        <button type="button">Tipo submit</button><!--button es mas personalizable que submit de arriba es otra alternativa de boton (en este se puede modificar el texto)-->
+                                        <!--a este le podemos pasar 3 valores en el area de type (BUTTON,RESET,SUBMIT)
+                                        BUTTON UN BOTON QUE ES SOLO ASI COMO EL DE SUBMIT DE DEL COMENTARIO INPUT(pero sin direccionar a ningun)
+                                        RESET ES UN BOTON QUE REINICIA LOS VALORES QUE TENIA X DEFECTO( o valores iniciales)
+                                        SUBMIT ES UN BOTON QUE SI LO ESCRIBIMOS JUNTO CON FOR (EL LABEL FOR TRATA DE ENVIAR EL FORMULARIO
+                                        (va a enviar a la ruta que nosotros hayammos inidicado en ACTION utilizando el metodo que hayamos elegido(POST O GET))                                    ↑ ↓ ))-->
+
+         <!--<input type="submit" /> (da un boton de enviar) (los datos que envie los manda a un servidor HAY QUE ESPECIFICAR A QUE SERVIDOR SE ENVIAN)-->
+        
+
+    </form> <!--formularios / dentro de este tendremos que poner los distintos campos de informacion |asi solo genera un campo de texto --> 
+
+        <h1>Hola mundo</h1>          <!--H1 = Titulo encabezado -->
+        <h2>segundo hola mundo</h2>          <!--H2 = Titulo segundo encabezado-->         
+        <h3>Hola mundo</h3>          <!--H = cada vez mas pequeño -->     
+        <h4>Hola mundo</h4> <br> <!--(br)sirve para hacer una separacion del texto-->       
+        <h5>Hola mundo</h5>
+        <h6>chanchito feliz</h6>
+
+
+
+    <p1>Eric dice Hola</p1>       <!--P1 = parrafo -->
+    <hr>   <!--separar textos-->
+    <p2>adios parrafo</p2>
+
+    <a href="https://github.com/erickevsh">ir a mi github</a> <!--hipervinculo-->
+    <hr>
+        <a target="blank" href="https://github.com/erickevsh">ir a mi github en un nueva pagina</a> <!--hipervinculo nueva pagina-->
+    <hr>
+    
+    <img src="https://imgs.search.brave.com/hxB2kskKrPNEGq_VpQRcMEZ_DCr2mCcm0Lvf2Zqg0rQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/dGhlLW1pc3VuZGVy/c3Rvb2QtZ29rdS1h/LWRlZXAtZGl2ZS1p/bnRvLWhpcy10cnVl/LWNoYXJhY3Rlci12/MC12d2gwdXBvbWJi/M2YxLmpwZWc_d2lk/dGg9NjQwJmNyb3A9/c21hcnQmYXV0bz13/ZWJwJnM9OWUzNGVl/MjkyMzVhNDAwMzQ4/OWRkZTkwOGMzNDg5/NWIxMjYzZTk0Zg"/>
+    <img src="img/goku.webp"/> <!--nombre de mi imagen esta linea es igual a la de arriba como es un link y el otro una direccion desde la carpeta del proyecto-->
+    <!--img/la imagen indica que la imagen que muestro esta dentro de una carpeta-->
+    <!--cambiar width= "200" height= "200" (colocar ambas para reducir aunmas la img)-->
+    
+</body>
+</html>
+
+<!--click derecho open with live server (instala antes live server)-->
